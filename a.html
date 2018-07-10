@@ -1,0 +1,282 @@
+<!DOCTYPE html>
+
+<html lang="en">
+
+<head>
+	<meta charset="utf-8" />
+	<meta name="viewport" content="width=device-width,initial-scale=1.0,user-scalable=no,minimum-scale=1.0,maximum-scale=1.0" />
+	<meta name="apple-mobile-web-app-capable" content="yes" />
+	<meta name="apple-mobile-web-app-status-bar-style" content="black" />
+	<meta name="format-detection" content="telephone=no" />
+	<meta name="format-detection" content="email=no" />
+	<title></title>
+	<link rel="stylesheet" href="../../static/css/master.css" />
+	<link rel="stylesheet" href="../../static/css/listdateils.css" />
+	<link rel="stylesheet" href="../../static/swiper/swiper.min.css" />
+</head>
+<body>
+	
+	<div class="head-box">
+		
+		<div class="head-jt" id="fhBtn"></div>
+
+		<div id="infoCont">
+			<!-- <div class="head-photo">
+				<img src="../../static/image/1.jpeg" alt="">
+			</div>
+			<div class="head-name">董美君</div>
+			<div class="head-pm"><span></span>积分 109<span></span>排名 9<span><i></i></span></div> -->
+		</div>
+
+	</div>
+
+	<div id="teamcont">
+		<!-- <div class="team">
+			<div class="team-tlt">团队成员</div>
+			<div id="team-cont">
+				<div class="team-info">
+					<span>销售1</span>
+					<span>个人积分100分  |  个人排名11名</span>
+				</div>
+				<div class="team-info">
+					<span>销售1</span>
+					<span>个人积分100分  |  个人排名11名</span>
+				</div>
+				<div class="team-info">
+					<span>销售1</span>
+					<span>个人积分100分  |  个人排名11名</span>
+				</div>
+			</div>
+		</div> -->
+	</div>
+
+
+	<div class="cont-box">
+		<ul>
+			<li class="on">
+
+				<div class="cont-tlt">
+
+					<div class="ztext tlt-text on">
+						<div class="text-t1">周榜</div>
+						<div class="text-t2"><span class="zDate detaisdata" data-sjc="">5/12</span>-<span class="zDate2 detaisdata2" data-sjc="">5/18</span></div>
+					</div>
+
+					<div class="ytext tlt-text">
+						<div class="text-t1">月榜</div>
+						<div class="text-t2"><span class="yDate detaisdata" data-sjc="">5/12</span>-<span class="yDate2 detaisdata2" data-sjc="">5/18</span></div>
+					</div>
+
+					<div class="jtext tlt-text">
+						<div class="text-t1">季榜</div>
+						<div class="text-t2"><span class="jDate detaisdata" data-sjc="">5/12</span>-<span class="jDate2 detaisdata2" data-sjc="">5/18</span></div>
+					</div>
+
+					<div class="ntext tlt-text">
+						<div class="text-t1">年榜</div>
+						<div class="text-t2"><span class="nDate detaisdata" data-sjc="">2018</span>-<span class="nDate2 detaisdata2" data-sjc="">2019</span></div>
+					</div>
+
+
+				</div>
+				
+
+				<div class="swiper-container favor-list">
+					<div class="swiper-wrapper">
+						<div class="swiper-slide" id="zbcont">
+							
+							<!-- <div class="score">
+								
+								<div class="score-tlt">
+									<span></span>
+									<span></span>
+									<span>意向得分</span>
+									<span></span>
+									<span></span>
+								</div>
+
+								<div class="tlt-data clearfix">
+									<div>分类</div>
+									<div>奖励系数</div>
+									<div>经销商</div>
+									<div>机器数</div>
+								</div>
+
+								<div class="score-cont">
+									
+									<div class="score-cont-list clearfix">
+										<div>
+											<p>校区人数</p>
+											<p>（10000人以上）</p>
+										</div>
+										<div>1</div>
+										<div>1</div>
+										<div>1</div>
+									</div>
+
+
+								</div>
+
+								<div class="tlt-data2">合计</div>
+
+								<div class="score-total">
+									<div class="score-cont-list clearfix">
+										<div>
+											<p>校区人数</p>
+											<p>（10000人以上）</p>
+										</div>
+										<div>1</div>
+										<div>1</div>
+										<div>1</div>
+									</div>
+								</div>
+
+							</div> -->
+
+						</div>
+
+						<div class="swiper-slide" id="ybcont">
+							
+						</div>
+
+						<div class="swiper-slide" id="jbcont">
+							
+						</div>
+
+						<div class="swiper-slide" id="nbcont">
+							
+						</div>
+					</div>
+				</div>
+
+
+
+
+			</li>
+		</ul>
+	</div>
+
+	
+	
+
+
+
+
+	<script src="../../static/js/jquery.min.js"></script>
+	<script src="../../static/js/jquery.cookie.js"></script>
+	<script src="../../static/js/API.js"></script>
+	<script src="../../static/js/utils.js"></script>
+	<script src="../../static/swiper/swiper-3.3.1.jquery.min.js"></script>
+	<script src="../../static/js/template.js"></script>
+	<script src="../../static/js/listdetails.js"></script>
+
+    <script type="text/html" id="infodetails">
+         这是第一次修改
+    	<div class="head-photo">
+			<img src="{{avatar}}" alt="">
+		</div>
+		<div class="head-name">{{name}}</div>
+		<div class="head-pm">
+			<span></span>积分 {{score}}<span></span>排名 {{position}}<span><i class="head-btn" data-iftc="true"></i></span>
+			<div class="head-tc">
+				<div class="head-tc-sj"></div>
+				<div class="head-tc-text"></div>
+			</div>
+		</div>
+
+    </script>
+
+    <script type="text/html" id="teamdetails">
+    	<div class="team">
+			<div class="team-tlt">团队成员</div>
+			<div id="team-cont">
+				{{each}}
+				<div class="team-info">
+					<span>{{$value.name}}</span>
+					<span><i>个人积分{{$value.score}}分</i><i> |</i><i>个人排名{{$value.position}}名</i></span>
+				</div>
+				{{/each}}
+			</div>
+		</div>
+    </script>
+
+    <script  type="text/html" id="listdetail">
+		
+		<div class="score">
+								
+			<div class="score-tlt">
+				<span></span>
+				<span></span>
+				<span>意向得分</span>
+				<span></span>
+				<span></span>
+			</div>
+
+			<div class="tlt-data clearfix">
+				<div>分类</div>
+				<div>奖励系数</div>
+				<div>经销商</div>
+				<div>机器数</div>
+			</div>
+
+			<div class="score-cont">
+				{{each intent}}
+				<div class="score-cont-list clearfix">
+					{{if $value.itemDesc == ''}}
+						<div style="line-height: .66rem;">
+							{{$value.itemTitle}}
+						</div>
+					{{else}}
+					<div>
+						<p>{{$value.itemTitle}}</p>
+						<p>{{$value.itemDesc}}</p>
+					</div>
+					{{/if}}
+					<div>{{$value.coefficient}}</div>
+					<div>{{$value.dealerCount}}</div>
+					<div>{{$value.machineCount}}</div>
+				</div>
+				{{/each}}
+
+			</div>
+
+			<div class="tlt-data2">合计</div>
+
+			<div class="score-total">
+				<div class="score-cont-list clearfix">
+					<div>
+						<p class="if-text">个人单项得分</p>
+						<p style="white-space: nowrap;">(基础分x系数后求和)</p>
+					</div>
+					<div>-</div>
+					<div>{{selfTotal.dealerCount}}</div>
+					<div>{{selfTotal.machineCount}}</div>
+				</div>
+				<div class="score-cont-list clearfix">
+					<div>
+						<p>单项基准分</p>
+						<p style="white-space: nowrap;">(单项最好成绩)</p>
+					</div>
+					<div>-</div>
+					<div>{{baseTotal.dealerCount}}</div>
+					<div>{{baseTotal.machineCount}}</div>
+				</div>
+				<div class="score-cont-list clearfix">
+					<div>
+						<p>单项最终得分</p>
+						<p style="white-space: nowrap;">(单项得分/基准分x100)</p>
+					</div>
+					<div>-</div>
+					<div>{{finalTotal.dealerCount}}</div>
+					<div>{{finalTotal.machineCount}}</div>
+				</div>
+			</div>
+
+		</div>
+
+	</script>
+
+
+
+</body>
+</html>
